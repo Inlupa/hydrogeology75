@@ -1,0 +1,226 @@
+/* Настойки тега хтмл */
+body{
+    margin:0;
+}
+html {
+        background: #d1cec9dc;
+        overflow-x:  hidden;
+        width:100vw;
+}
+/* Ширина скроллбара */
+::-webkit-scrollbar {
+    width: 10px;
+     transition: 0.15s;
+
+}
+
+/* Вид скроллбара*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #fbc02d;
+}
+/* Задний фон скролбара*/
+::-webkit-scrollbar-track{
+    background: #000000dc;
+}
+
+/* РНастройки списка */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+    background: #000000dc;
+}
+.swiper_container{
+}
+/* Настройка контейнера навбара */
+.flex-container{
+    border-radius:5px;
+    list-style: none;
+    margin: 0;
+
+}
+/* Настройка ссылок-кнопок внутри навбара*/
+.flex-container a {
+  border-radius: 5px;
+  text-decoration: none;
+  padding:  20px;
+  color: #ccb0a1dc;
+  font: 17px sans-serif;
+  transition: 0.15s;
+}
+
+/* Change the link color on hover */
+.flex-container a:hover {
+  background: #fbc02d;
+  color: white;
+  transition: 0.15s;
+}
+
+.wrapper{
+    min-height:100%;
+}
+
+.image_slider{
+}
+
+.image-slider__wrapper{
+}
+/* Задний фон чтобы не было полосы между картинкой и навбаром*/
+.image-slider__slide{
+    background:#000000dc;
+}
+
+.image-slider__image{
+    position: relative;
+    text-align:center:
+}
+
+.image-slider__image img {
+    max-width:100%;
+}
+/* Текст на картинке*/
+.text-on-pic {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Описание кнопки ссылки внутри свайпера */
+
+.button_type a {
+
+    text-decoration: none;
+    border-radius:50px;
+    padding:20px 100px;
+    background-color:#fc9700dc;
+    color: #041624dc;
+    font: 50px/1 sans-serif;
+    transition: 0.15s;
+
+}
+
+.button_type a:hover {
+  background: #fbc02d;
+  color: white;
+  animation: fadeIn 5s;
+  transition: 0.15s;
+}
+
+/* Тип текста на сайте под навбарами */
+.text-on-site {
+    padding: 20px;
+    font: 50px/1 sans-serif;
+    text-decoration: none;
+    line-height: 50px;
+    text-align:justify;
+}
+
+
+label {
+    font: 15px/1 sans-serif;
+    text-decoration: none;
+    color: #041624dc;
+    padding:5px;
+
+}
+/* инпут поля(по хорошему переделать ) */
+input {
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+
+}
+
+   /* класс из формы в питоне  */
+.input_form {
+  border-radius: 10px;
+  max-width:95%;
+}
+
+.input_form_content {
+  border-radius: 5px;
+  width:98%;
+  height:150px;
+  font: 15px/1 sans-serif;
+  text-decoration: none;
+
+}
+/* Стиль таблицы надо будет переработать  */
+
+
+table {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 14px;
+        text-align: center;
+        border-collapse: collapse;
+        border-radius: 10px;
+        box-shadow: 0 0 0 5px #F2906B;
+        color: #452F21;
+        width:50%;
+}
+th {
+        padding: 10px 8px;
+        background: white;
+}
+table th:first-child {
+        border-top-left-radius: 10px;
+}
+table th:last-child {
+        border-top-right-radius: 10px;
+}
+td {
+        border-top: 5px solid #F2906B;
+        padding: 8px;
+        background: white;
+}
+        table td:first-child {
+        border-bottom-left-radius: 10px;
+}
+        table td:last-child {
+        border-bottom-right-radius: 10px;
+}
+
+/* Кнопки сохрания и отправки данных   */
+
+.submit_button {
+    text-decoration: none;
+    border-radius:20px;
+    padding:15px 70px;
+    background-color:#fc9700dc;
+    color: #041624dc;
+    font: 20px/1 sans-serif;
+    transition: 0.15s;
+    max-width:50%;
+}
+
+.submit_button:hover {
+    background: #fbc02d;
+    color: white;
+    animation: fadeIn 5s;
+    transition: 0.15s;
+}
+
+.link_button {
+    text-decoration: none;
+    border-radius:20px;
+    padding:5px 10px;
+
+    color: #041624dc;
+    font: 15px/1 sans-serif;
+    transition: 0.15s;
+    max-width:95%;
+}
+
+.link_button:hover {
+    background: #fbc02d;
+    color: white;
+    animation: fadeIn 5s;
+    transition: 0.15s;
+}

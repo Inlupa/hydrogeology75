@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel='stylesheet' href="{% static 'css/looks.css' %}">
+    <link rel='stylesheet' href="{% static 'css/flex.css' %}">
+    <link rel='stylesheet' href="{% static 'css/classes.css' %}">
+    <link rel='stylesheet' href="{% static 'css/media.css' %}">
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="no_space">
+
+<nav class="navbar flex no_space">
+    <ul class="flex-container flex flex-horizontal-center no_space">
+        <li class="navitem flex flex-center"><a href="/"> <img src="{% static 'img/icon_road.jpg' %}" width="80" height="40" alt="Картинка"/> </a></li>
+        <li class="navitem flex flex-center"><a href="#"> Оборудование </a></li>
+        <li class="navitem flex flex-center"><a href="#"> Материалы </a></li>
+        <li class="navitem flex flex-center"><a href="#"> Инструменты </a></li>
+        <li class="navitem flex flex-center"><a href="#"> Обслуживание </a>
+        <li class="navitem flex flex-center"><a href="#"> Документация </a></li>
+        <li class="navitem flex flex-center"><a href="#"> Вакансии </a></li>
+        <li class="navitem flex flex-center"><a href="#"> Как добраться </a></li>
+        <li class="navitem flex flex-center"><a href="#"> Контакты </a></li>
+    </ul>
+</nav>
+
+<script src="{% static 'js/main.js' %}"></script>
+
+<div > {% block content %}{% endblock %}</div>
+</body>
+</html>
