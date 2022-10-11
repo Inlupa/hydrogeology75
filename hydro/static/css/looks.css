@@ -32,7 +32,9 @@ ul {
 }
 
 .navbar {
-    background: #000000dc;
+    background: #00BFFF;
+    border-radius:0 0 10px 10px;
+
 }
 .swiper_container{
 }
@@ -44,50 +46,21 @@ ul {
 
 }
 /* Настройка ссылок-кнопок внутри навбара*/
-.flex-container a {
+.flex-container a{
   border-radius: 5px;
   text-decoration: none;
-  padding:  20px;
-  color: #ccb0a1dc;
+  padding:20px;
+  marin:10px;
+  color: #00008B;
   font: 17px sans-serif;
   transition: 0.15s;
 }
 
 /* Change the link color on hover */
 .flex-container a:hover {
-  background: #fbc02d;
+  background: #00008B;
   color: white;
   transition: 0.15s;
-}
-
-.wrapper{
-    min-height:100%;
-}
-
-.image_slider{
-}
-
-.image-slider__wrapper{
-}
-/* Задний фон чтобы не было полосы между картинкой и навбаром*/
-.image-slider__slide{
-    background:#000000dc;
-}
-
-.image-slider__image{
-    position: relative;
-    text-align:center:
-}
-
-.image-slider__image img {
-    max-width:100%;
-}
-/* Текст на картинке*/
-.text-on-pic {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 /* Описание кнопки ссылки внутри свайпера */
@@ -103,24 +76,6 @@ ul {
     transition: 0.15s;
 
 }
-
-.button_type a:hover {
-  background: #fbc02d;
-  color: white;
-  animation: fadeIn 5s;
-  transition: 0.15s;
-}
-
-/* Тип текста на сайте под навбарами */
-.text-on-site {
-    padding: 20px;
-    font: 50px/1 sans-serif;
-    text-decoration: none;
-    line-height: 50px;
-    text-align:justify;
-}
-
-
 label {
     font: 15px/1 sans-serif;
     text-decoration: none;
