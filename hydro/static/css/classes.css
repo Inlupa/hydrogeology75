@@ -17,3 +17,59 @@
    }
 
 
+
+
+.reg_container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 0 ;
+    width:70%;
+    gap: 20px;
+}
+textarea{
+    border-radius:10px;
+}
+input{
+    border-radius:10px;
+}
+
+
+.pic{
+             background: url("/static/img/mgu.jpg") center no-repeat ;
+             height: 977px;
+
+        }
+@media all and (max-width: 600px) {
+        .pic{
+             background: url("/static/img/mgu.jpg") center no-repeat ;
+             height: 100px;
+        }
+}
+
+@media all and (max-width: 1200px) {
+        .pic{
+             background: url("/static/img/mgu.jpg") center no-repeat ;
+             height: 700px;
+        }
+}
+@media all and (max-width: 1980px) {
+        .pic{
+             background: url("/static/img/mgu.jpg") center no-repeat ;
+             height: 970px;
+        }
+
+}
+
+
+.input_button:hover{
+    background-color:#21b0db;
+    color:white;
+    transition:0.15s;
+}
+
+
+select{
+        gap:10px;
+        padding:15px 20px;
+        border-radius:10px;
+}

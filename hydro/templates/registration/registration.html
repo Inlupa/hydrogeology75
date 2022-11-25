@@ -1,10 +1,22 @@
 {% extends "base.html" %}
 {% block title %} Подача тезисов {% endblock %}
 {% block content %}
-
-<form  method="post" >
+<h1 class=" flex flex-horizontal-center"> Заявка на участие </h1>
+<form  method="post" enctype="multipart/form-data">>
     {% csrf_token %}
-    {{form.as_table }}
-    <input type="submit" value="SignUp">
-{% endblock %}
+    <div class="wrapper flex flex-horizontal-center">
+        <div class=" manrope reg_container">
+            <div class=" flex flex-horizontal-center">  {{form.fio}} </div>
+            <div class=" flex flex-horizontal-center"> {{form.article_name}} </div>
+            <div class=" flex flex-horizontal-center"> {{form.abstract}} </div>
+            <div class=" flex flex-horizontal-center"> {{form.thesis}} </div>
+            <div class=" flex flex-horizontal-center"> {{form_file.file}} </div>
+            <div class=" flex flex-horizontal-center">
+                <input class="input_button" type="submit" value="Подать заявку">
+            </div>
+
+        </div>
+    </div>
 </form>
+
+{% endblock %}

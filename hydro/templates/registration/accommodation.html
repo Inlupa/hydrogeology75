@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} Вход {% endblock %}
+{% block content %}
+<h1 class=" flex flex-horizontal-center"> Заявка на проживание </h1>
+
+<form  method="post">
+    {% csrf_token %}
+    <div class="wrapper flex flex-horizontal-center">
+        <div class=" manrope reg_container">
+
+            <div class=" flex flex-horizontal-center">  {{form.reg_fio}} </div>
+            <div class=" flex flex-horizontal-center"> {{form.pers_num}} </div>
+            <div class=" flex flex-horizontal-center">
+
+                    <div class="flex flex-vertical-center">Дата заселения:</div>
+                    <div> {{form.date_start}} </div>
+            </div>
+
+            <div class=" flex flex-horizontal-center">
+
+                    <div class="flex flex-vertical-center">Дата выселения:</div>
+                    <div> {{form.date_end}} </div>
+            </div>
+            <div class=" flex flex-horizontal-center"> {{form.comments}} </div>
+            <div class=" flex flex-horizontal-center">
+                <input class="input_button" type="submit" value="Подать заявку">
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+</form>
