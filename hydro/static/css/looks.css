@@ -17,7 +17,7 @@ html {
 /* Вид скроллбара*/
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #fbc02d;
+  background: #21b0db;
 }
 /* Задний фон скролбара*/
 ::-webkit-scrollbar-track{
@@ -178,4 +178,17 @@ td {
     color: white;
     animation: fadeIn 5s;
     transition: 0.15s;
+}
+
+
+@font-face {
+          font-family: 'Manrope';;
+          src: local("../fonts/Manrope-Regular.ttf"), url("../fonts/Manrope-Regular.ttf") format("truetype");
+          font-style: normal;
+        }
+
+.manrope{
+    font-family: 'Manrope';
+    font-style: normal;
+    text-decoration:none
 }
