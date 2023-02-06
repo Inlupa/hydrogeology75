@@ -25,14 +25,17 @@ html {
 }
 
 /* РНастройки списка */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+.inside_base{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+
 }
 
 .navbar {
-    background: #00BFFF;
+    background: skyblue;
+
     border-radius:0 0 10px 10px;
 
 }
@@ -43,16 +46,15 @@ ul {
     border-radius:5px;
     list-style: none;
     margin: 0;
-
 }
 /* Настройка ссылок-кнопок внутри навбара*/
 .flex-container a{
   border-radius: 5px;
   text-decoration: none;
+  font-size:21px;
   padding:20px;
   marin:10px;
   color: #00008B;
-  font: 17px sans-serif;
   transition: 0.15s;
 }
 
@@ -191,4 +193,31 @@ td {
     font-family: 'Manrope';
     font-style: normal;
     text-decoration:none
+}
+
+.tabs_container{
+    padding:10px 50px;
+
+    display:flex;
+    font-size:20px;
+    justify-content: center;
+    flex-direction:column;
+    gap:30px;
+}
+
+ul{
+    margin:0;
+    list-style: square;
+}
+
+p{
+    margin:0;
+}
+
+h3{
+    margin:0;
+}
+
+h4{
+    margin:0;
 }
