@@ -1,23 +1,24 @@
 from django import forms
-from .models import Article, Accommodation
+from .models import Article, Accommodation, type_of_report_choices
 
 
 class InsertAtricleForm(forms.ModelForm):
+    type_of_report = forms.ChoiceField(choices= type_of_report_choices)
     class Meta:
         model = Article
-        fields = ['fio', 'article_name', 'abstract', 'thesis',]
+        fields = ['fio', 'article_name', 'abstract', 'type_of_report', 'organisation',]
         widgets = {
             'fio': forms.TextInput(attrs={'class': 'form-control', 'placeholder':'ФИО'}),
             'article_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Название статьи'}),
             'abstract': forms.TextInput(attrs={'class': 'form-control ', 'placeholder': 'Абстракт'}),
-            'thesis': forms.Textarea(attrs={'class': 'form-control ', 'type': 'text', 'placeholder': 'Тезисы', 'cols':'200'}),
+            'type_of_report': forms.Select(attrs={'class': 'input_offer', 'style':'width:100%;', 'placeholder': 'Тип доклада'}),
+            'organisation': forms.TextInput(attrs={'class': 'form-control ', 'placeholder': 'Организация'}),
         }
 
         labels = {
                     'fio': 'ФИО',
                     'article_name': 'Название статьи:',
                     'abstract': 'Абстракт',
-                    'thesis': 'Тезисы',
                 }
 
 
