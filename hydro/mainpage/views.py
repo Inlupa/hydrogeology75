@@ -21,7 +21,7 @@ def download_theses(requests):
     # Define Django project base directory
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # Define text file name
-    filename = 'thesis_download.docx'
+    filename = 'Theses_hydrogeol_MSU_70.docx'
     # Define the full file path
     filepath = BASE_DIR + '/static/doc/' + filename
     # Open the file for reading content

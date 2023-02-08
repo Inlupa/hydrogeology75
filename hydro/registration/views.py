@@ -24,3 +24,16 @@ def accommodation(request):
             form_acc = AccommodationForm()
     return render(request, "registration/accommodation.html",
                   context={'form': form_acc})
+
+
+
+
+
+
+
+
+
+
+
+
+

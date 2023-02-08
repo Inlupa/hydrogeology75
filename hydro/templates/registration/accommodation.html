@@ -4,43 +4,50 @@
 {% load static %}
 <h1 class="manrope flex flex-horizontal-center" style="padding:0 10px"> О месте проведения конференции </h1>
 <div class="tabs_container manrope">
-    <p> Пансионат МГУ «Буревестник» имеет два отделения со спальными корпусами, столовыми, спортивными и конференц площадками.На время проведения конференции размещение участников предполагается во 2-м отделение пансионата, который включает современные 2-х этажные спальные корпуса с 1-2-3 местными номерами, из окон которых открывается великолепный вид заходящего солнца, золотисто-бархатные лучи, которого утопают в бирюзе морского горизонта.Все номера отличаются высокой комфортабельностью, домашним уютом, прекрасной мебелью, имеют душ, санузел, телевизор, холодильник, кондиционер.</p>
-    <p> С более подробной информацией можно ознакомиться на сайте Пансионата МГУ «Буревесник» по <a href="http://burevestnik.info"> ссылке </a></p>
-    <p> В сентябре климат в Сочи теплый: средняя температура днём – +25ºС, в среднем 26 ясных дней, температура воды – около 23ºС. В сентябре, как в июне, июле и августе Сочи cчитается местом, комфортным для посещения и отдыха.</p>
+    <p> Пансионат МГУ «Буревестник» имеет два отделения со спальными корпусами, столовыми, спортивными и конференц
+        площадками. На время проведения конференции размещение участников предполагается во 2-м отделении пансионата,
+        который включает современные 2-х этажные спальные корпуса с 1-2-3 местными номерами, из окон которых открывается
+        великолепный вид заходящего солнца, золотисто-бархатные лучи которого утопают в бирюзе морского горизонта. Все
+        номера отличаются высокой комфортабельностью, домашним уютом, прекрасной мебелью, имеют душ, санузел, телевизор,
+        холодильник, кондиционер.</p>
+    <p> С более подробной информацией можно ознакомиться на сайте  по <a
+            href="http://burevestnik.info"> Пансионата МГУ «Буревесник» </a></p>
+    <p> В сентябре климат в Сочи теплый: средняя температура днём – +25ºС, в среднем 26 ясных дней, температура воды –
+        около 23ºС. В сентябре, как в июне, июле и августе Сочи cчитается местом, комфортным для посещения и отдыха.</p>
 
 </div>
 
 
 <div class=" flex flex-horizontal-center">
-   <img style="width:60%;"  src="{% static 'img/burevestnic_1.png' %}" alt="Картинка"/>
+    <img style="width:60%;" src="{% static 'img/burevestnic_1.png' %}" alt="Картинка"/>
 </div>
 <div class=" flex flex-horizontal-center">
-    <img style="width:60%;"  src="{% static 'img/burevestnic_2.png' %}" alt="Картинка"/>
+    <img style="width:60%;" src="{% static 'img/burevestnic_2.png' %}" alt="Картинка"/>
 </div>
 <div class=" flex flex-horizontal-center">
-    <img style="width:60%;"  src="{% static 'img/burevestnic_3.png' %}" alt="Картинка"/>
+    <img style="width:60%;" src="{% static 'img/burevestnic_3.png' %}" alt="Картинка"/>
 </div>
 
 <h1 class="manrope flex flex-horizontal-center"> Заявка на проживание </h1>
-<form  method="post">
+<form method="post">
     {% csrf_token %}
     <div class="wrapper flex flex-horizontal-center">
         <div class=" manrope reg_container">
 
-            <div class=" flex flex-horizontal-center">  {{form.reg_fio}} </div>
-            <div class=" flex flex-horizontal-center"> {{form.pers_num}} </div>
+            <div class=" flex flex-horizontal-center"> {{form.reg_fio}}</div>
+            <div class=" flex flex-horizontal-center"> {{form.pers_num}}</div>
             <div class=" flex flex-horizontal-center">
 
-                    <div class="flex flex-vertical-center">Дата заселения:</div>
-                    <div> {{form.date_start}} </div>
+                <div class="flex flex-vertical-center">Дата заселения:</div>
+                <div> {{form.date_start}}</div>
             </div>
 
             <div class=" flex flex-horizontal-center">
 
-                    <div class="flex flex-vertical-center">Дата выселения:</div>
-                    <div> {{form.date_end}} </div>
+                <div class="flex flex-vertical-center">Дата выселения:</div>
+                <div> {{form.date_end}}</div>
             </div>
-            <div class=" flex flex-horizontal-center"> {{form.comments}} </div>
+            <div class=" flex flex-horizontal-center"> {{form.comments}}</div>
             <div class=" flex flex-horizontal-center">
                 <input class="input_button" type="submit" value="Подать заявку">
             </div>
