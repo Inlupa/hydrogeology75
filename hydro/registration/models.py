@@ -1,18 +1,23 @@
 from django.db import models
 
 type_of_report_choices =(
-    ("1", "Устный доклад"),
-    ("2", "Постерный доклад"),
-    ("3", "Без доклада"),
+    ("Устный доклад", "Устный доклад"),
+    ("Постерный доклад", "Постерный доклад"),
+    ("Без доклада", "Без доклада"),
 )
+
+class FileDownload(models.Model):
+    file = models.FileField(null=True, blank=True)
+    class Meta:
+        managed = False
 
 class Article(models.Model):
     reg_id = models.AutoField(primary_key=True)
-    fio = models.CharField(max_length=1000,  blank=True)
+    fio = models.CharField(max_length=1000)
     article_name = models.CharField(max_length=1000,  blank=True)
     abstract = models.CharField(max_length=1000,  blank=True)
     type_of_report = models.CharField(max_length=1000, blank=True)
-    organisation = models.CharField(max_length=1000, blank=True)
+    organisation = models.CharField(max_length=1000)
 
     class Meta:
         managed = False

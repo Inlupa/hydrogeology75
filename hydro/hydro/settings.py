@@ -70,7 +70,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'hydro.wsgi.application'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'anton199823@gmail.com'
+EMAIL_HOST_PASSWORD = 'ozthvxfpmfmdixmx'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 # Database
@@ -81,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': 'hornetm3',
         'HOST': 'localhost',
         'PORT': '5432',
     }

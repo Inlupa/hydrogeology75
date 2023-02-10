@@ -1,5 +1,5 @@
 from django import forms
-from .models import Article, Accommodation, type_of_report_choices
+from .models import Article, Accommodation, type_of_report_choices, FileDownload
 
 
 class InsertAtricleForm(forms.ModelForm):
@@ -22,8 +22,13 @@ class InsertAtricleForm(forms.ModelForm):
                 }
 
 
-class UploadFileForm(forms.Form):
-    file = forms.FileField()
+class UploadFileForm(forms.ModelForm):
+    class Meta:
+        model = FileDownload
+        fields = ['file']
+        labels = {
+            'file': 'Загрузите пожалуйста файл',
+        }
 
 MONTHS = {
     1:('Январь'), 2:('Февраль'), 3:('Март'), 4:('Апрель'),
@@ -49,3 +54,9 @@ class AccommodationForm(forms.ModelForm):
             'date_end': 'Конец проживания',
             'comments': 'Комментарии',
         }
+
+
+class ContactForm(forms.Form):
+    from_email = forms.EmailField(label='Email', required=True)
+    subject = forms.CharField(label='Тема', required=True)
+    message = forms.CharField(label='Сообщение', widget=forms.Textarea, required=True)
