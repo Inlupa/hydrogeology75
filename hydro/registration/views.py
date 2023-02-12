@@ -58,19 +58,20 @@ def accommodation(request):
             # тут надо переписать для отправки на проживание, но это не сейчас, а завтра
 
 
-            # reg_fio = form_acc.cleaned_data['fio']
-            # org = form_acc.cleaned_data['organisation']
-            # name = form_acc.cleaned_data['article_name']
-            # abst = form_acc.cleaned_data['abstract']
-            # type_of_report = form_acc.cleaned_data['type_of_report']
-            #
-            # text_mail = "Организация участника: " + org + ". Тип доклада: " + type_of_report + ". Название доклада: " + name + ". Абстракт: " + abst + "."
-            # email = EmailMessage(
-            #         "Заявка на участие от " + fio,
-            #         text_mail,
-            #         'anton199823@gmail.com',
-            #         ['msu.inlupa@gmail.com', 'msu_hydro70@mail.ru'])
-            # email.send()
+            reg_fio = form_acc.cleaned_data['reg_fio']
+            pers_num = form_acc.cleaned_data['pers_num']
+            date_start = form_acc.cleaned_data['date_start']
+            date_end = form_acc.cleaned_data['date_end']
+            comments = form_acc.cleaned_data['comments']
+
+
+            text_mail = "Кол-во людей: " + str(pers_num) + ". Дата поселения: " + str(date_start) + ". Дата выселения: " + str(date_end) + ". Комментарии: " + comments + "."
+            email = EmailMessage(
+                    "Заявка на проживание от " + reg_fio,
+                    text_mail,
+                    'anton199823@gmail.com',
+                    ['msu.inlupa@gmail.com', 'msu_hydro70@mail.ru'])
+            email.send()
 
 
             form_acc.save()
