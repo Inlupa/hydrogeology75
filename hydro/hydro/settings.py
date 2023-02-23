@@ -71,8 +71,8 @@ TEMPLATES = [
 ]
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'anton199823@gmail.com'
-EMAIL_HOST_PASSWORD = 'ozthvxfpmfmdixmx'
+EMAIL_HOST_USER = 'msu.hydro70@gmail.com'
+EMAIL_HOST_PASSWORD = 'bqhcupabzasrlsml'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

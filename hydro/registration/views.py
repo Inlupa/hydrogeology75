@@ -69,8 +69,8 @@ def accommodation(request):
             email = EmailMessage(
                     "Заявка на проживание от " + reg_fio,
                     text_mail,
-                    'anton199823@gmail.com',
-                    ['msu.inlupa@gmail.com', 'msu_hydro70@mail.ru'])
+                    'msu_hydro70@gmail.com',
+                    ['msu_hydro70@mail.ru'])
             email.send()
 
 
